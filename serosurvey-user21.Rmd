@@ -412,7 +412,7 @@ the [Article tab](https://avallecam.github.io/serosurvey/articles/howto-reprex.h
 --
 
 ```{r,eval=FALSE,echo=TRUE}
-# 56-60sec por covariable 
+# 56-60sec per covariate
 # 4GB RAM
 # parallelized in 8 cores using purrr y furrr
 
