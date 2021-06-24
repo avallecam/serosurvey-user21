@@ -80,7 +80,7 @@ pre {
 --
 
 .footnote[
-[1] Larremore, Daniel B., Bailey K. Fosdick, Sam Zhang, and Yonatan H. Grad. 2020. “Jointly Modeling Prevalence, Sensitivity and Specificity for Optimal Sample Allocation.” _bioRxiv_, May. https://doi.org/10.1101/2020.05.23.112649.
+[1] Larremore, DB., Bailey K. Fosdick, Sam Zhang, and Yonatan H. Grad. 2020. “Jointly Modeling Prevalence, Sensitivity and Specificity for Optimal Sample Allocation.” _bioRxiv_, May. https://doi.org/10.1101/2020.05.23.112649.
 
 [2] Gelman, Andrew, and Bob Carpenter. 2020. “Bayesian Analysis of Tests with Unknown Specificity and Sensitivity.” _Journal of the Royal Statistical Society: Series C (Applied Statistics)_, August. https://doi.org/10.1111/rssc.12435.
 
@@ -220,9 +220,9 @@ in [Article tab](https://avallecam.github.io/serosurvey/articles/howto-reprex.ht
 .footnote[
 [1] Rogan, Walter J., and Beth Gladen. 1978. “Estimating Prevalence from the Results of A Screening Test.” _American Journal of Epidemiology_ 107 (1): 71–76. https://doi.org/10.1093/oxfordjournals.aje.a112510.
 
-[2] Larremore, Daniel B, et al. 2021. “Estimating SARS-CoV-2 Seroprevalence and Epidemiological Parameters with Uncertainty from Serological Surveys.” _eLife_, March. https://doi.org/10.7554/eLife.64206.
+[2] Larremore, DB, et al. 2021. “Estimating SARS-CoV-2 Seroprevalence and Epidemiological Parameters with Uncertainty from Serological Surveys.” _eLife_, March. https://doi.org/10.7554/eLife.64206.
 
-[3] Larremore, Daniel B., et al. 2020. “Jointly Modeling Prevalence, Sensitivity and Specificity for Optimal Sample Allocation.” _bioRxiv_, May. https://doi.org/10.1101/2020.05.23.112649.
+[3] Larremore, DB., et al. 2020. “Jointly Modeling Prevalence, Sensitivity and Specificity for Optimal Sample Allocation.” _bioRxiv_, May. [10.1101/2020.05.23.112649](https://doi.org/10.1101/2020.05.23.112649).
 
 ]
 
@@ -302,7 +302,7 @@ certainty.
 ```
 
 ```{r,eval=FALSE}
-serosvy_unknown_sample_posterior_ii( #<<
+serosvy_unknown_sample_posterior( #<<
   #in population
   positive_number_test = 321,
   total_number_test = 321+1234,
