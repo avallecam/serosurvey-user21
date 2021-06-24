@@ -61,7 +61,7 @@ pre {
 
 --
 
-- We created the __serosurvey R package__ to gather Serological Survey Analysis (known and recently developed) __functions__ and __workflow__ templates.
+- We created the __[serosurvey](https://avallecam.github.io/serosurvey/) R package__ to gather known and recently developed __functions__ and build __workflow__ templates.
 
 
 ---
@@ -179,7 +179,11 @@ example("serosvy_proportion")
 
 --
 
-- We provide __tidy outputs for bayesian approaches__ developed 
+- We provide functions with __tidy outputs__ for frequentist and bayesian approaches available in GitHub repos to solve the inherited __misclassification__.
+
+--
+
+- One function adapted the __bayesian approach__ developed 
 by Larremore, et al. 2021 for [known](https://github.com/LarremoreLab/covid_serological_sampling/blob/master/codebase/seroprevalence.R) test performance
 
 --
@@ -241,7 +245,7 @@ example("serosvy_known_sample_posterior")
 
 --
 
-- And also for [unknown](https://github.com/LarremoreLab/bayesian-joint-prev-se-sp/blob/master/singleSERO_uncertainTEST.R) 
+- And a second one did the same with other __bayesian approach__ developed by Larremore et al. 2020 for [unknown](https://github.com/LarremoreLab/bayesian-joint-prev-se-sp/blob/master/singleSERO_uncertainTEST.R) 
 test performance.
 
 --
@@ -434,29 +438,7 @@ outcome_01_adj <- out  %>% #<<
 ```
 
 
-<!-- --- -->
 
-<!-- # Results -->
-
-<!-- -- -->
-
-<!-- - For the __survey__ side, we provide functions to calculate single prevalences and generate __tidy outputs__ for a hierarchical bayesian approach that incorporates the __unknown__ test performance -->
-
-<!-- -- -->
-
-<!-- - For the __serology__ side, we gather functions of methods available in GitHub repos to solve the inherited misclassification in population-based serological surveys. -->
-
-<!-- -- -->
-
-<!-- - We created a __workflow__ that simulates the usage of an __imperfect test__ to measure an outcome within a __multi-stage sampling__ survey design and incorporate the test uncertainty into the sampling design uncertainty. -->
-
-<!-- -- -->
-
-<!-- - The `serosurvey` R package was used in the analysis code of the Lima seroprevalence study.  -->
-
-<!-- -- -->
-
-<!-- [1] Reyes-Vega, Mary F., et al. "SARS-CoV-2 prevalence associated to low socioeconomic status and overcrowding in an LMIC megacity: A population-based seroepidemiological survey in Lima, Peru." _EClinicalMedicine_ 34 (2021): 100801. https://doi.org/10.1016/j.eclinm.2021.100801 -->
 
 ---
 
@@ -478,46 +460,6 @@ outcome_01_adj <- out  %>% #<<
 
 - Specially in our capacity to __generate comparable results__ from studies with similar epidemiological designs and statistical analysis plans.
 
---
-
-- The `serosurvey` R package was used in the analysis code of the Lima seroprevalence study. 
-
---
-
-[1] Reyes-Vega, Mary F., et al. "SARS-CoV-2 prevalence associated to low socioeconomic status and overcrowding in an LMIC megacity: A population-based seroepidemiological survey in Lima, Peru." _EClinicalMedicine_ 34 (2021): 100801. https://doi.org/10.1016/j.eclinm.2021.100801
-
-<!-- --- -->
-
-<!-- # Next steps -->
-
-<!-- -- -->
-
-<!-- - Adjust to the __rOpenSci__ packaging guidelines -->
-
-<!-- -- -->
-
-<!-- - Submit package to __CRAN__ -->
-
-<!-- -- -->
-
-<!-- - Integrate it to the R Epidemic Consortium __RECON__ -->
-
-<!-- -- -->
-
-<!-- - Welcome new functions and workflows to the package via __GitHub__! -->
-
-<!-- -- -->
-
-<!-- .footnote[ -->
-<!-- [1] https://devguide.ropensci.org/building.html -->
-
-<!-- [2] https://www.repidemicsconsortium.org/resources/guidelines/ -->
-
-<!-- [3] https://twitter.com/avallecam/status/1312670190694535169 -->
-<!-- ] -->
-
-
-
 ---
 
 class: center, middle
@@ -530,8 +472,7 @@ class: center, middle
 
 class: chapter-slide
 
-# References
-
+# Extra slides
 
 ---
 
@@ -565,3 +506,60 @@ class: chapter-slide
 [8] Larremore, DB, et al. 2021. “Estimating SARS-CoV-2 Seroprevalence and Epidemiological Parameters with Uncertainty from Serological Surveys.” _eLife_, March. https://doi.org/10.7554/eLife.64206.
 
 [9] Larremore, DB., et al. 2020. “Jointly Modeling Prevalence, Sensitivity and Specificity for Optimal Sample Allocation.” _bioRxiv_, May. https://doi.org/10.1101/2020.05.23.112649.
+
+
+---
+
+# Key Results
+
+--
+
+- For the __survey__ side, we provide functions to calculate single prevalences and generate __tidy outputs__ for a hierarchical bayesian approach that incorporates the __unknown__ test performance
+
+--
+
+- For the __serology__ side, we gather functions of methods available in GitHub repos to solve the inherited misclassification in population-based serological surveys.
+
+--
+
+- We created a __workflow__ that simulates the usage of an __imperfect test__ to measure an outcome within a __multi-stage sampling__ survey design and incorporate the test uncertainty into the sampling design uncertainty.
+
+--
+
+- The `serosurvey` R package was used in the analysis code of the Lima seroprevalence study. 
+
+--
+
+[10] Reyes-Vega, Mary F., et al. "SARS-CoV-2 prevalence associated to low socioeconomic status and overcrowding in an LMIC megacity: A population-based seroepidemiological survey in Lima, Peru." _EClinicalMedicine_ 34 (2021): 100801. https://doi.org/10.1016/j.eclinm.2021.100801
+
+
+
+---
+
+# Next steps
+
+--
+
+- Adjust to the __rOpenSci__ packaging guidelines
+
+--
+
+- Submit package to __CRAN__
+
+--
+
+- Integrate it to the R Epidemic Consortium __RECON__
+
+--
+
+- Welcome new functions and workflows to the package via __GitHub__!
+
+--
+
+.footnote[
+[1] https://devguide.ropensci.org/building.html
+
+[2] https://www.repidemicsconsortium.org/resources/guidelines/
+
+[3] https://twitter.com/avallecam/status/1312670190694535169
+]

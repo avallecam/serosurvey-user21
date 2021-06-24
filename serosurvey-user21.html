@@ -59,7 +59,7 @@ pre {
 
 --
 
-- We created the __serosurvey R package__ to gather Serological Survey Analysis (known and recently developed) __functions__ and __workflow__ templates.
+- We created the __[serosurvey](https://avallecam.github.io/serosurvey/) R package__ to gather known and recently developed __functions__ and build __workflow__ templates.
 
 
 ---
@@ -137,7 +137,11 @@ From a [`srvyr`](http://gdfe.co/srvyr/) [`survey`](https://r-survey.r-forge.r-pr
 
 --
 
-- We provide __tidy outputs for bayesian approaches__ developed 
+- We provide functions with __tidy outputs__ for frequentist and bayesian approaches available in GitHub repos to solve the inherited __misclassification__.
+
+--
+
+- One function adapted the __bayesian approach__ developed 
 by Larremore, et al. 2021 for [known](https://github.com/LarremoreLab/covid_serological_sampling/blob/master/codebase/seroprevalence.R) test performance
 
 --
@@ -165,7 +169,7 @@ by Larremore, et al. 2021 for [known](https://github.com/LarremoreLab/covid_sero
 ## # A tibble: 1 x 5
 ##   skim_variable numeric.p05 numeric.mean numeric.p50 numeric.p95
 ##   &lt;chr&gt;               &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
-## 1 r1                  0.182        0.201       0.201       0.220
+## 1 r1                  0.183        0.201       0.201       0.219
 ```
 
 &lt;img src="serosurvey-user21_files/figure-html/unnamed-chunk-9-1.png" title="One ggplot panel with density as vertical y-axis. Histogram and density plot of the Posterior Distribution of the Prevalence accounting for misclassification from a diagnostic test with known performance. Additionally, it includes vertical lines at the mean, 5% and 95% percentiles." alt="One ggplot panel with density as vertical y-axis. Histogram and density plot of the Posterior Distribution of the Prevalence accounting for misclassification from a diagnostic test with known performance. Additionally, it includes vertical lines at the mean, 5% and 95% percentiles."  /&gt;
@@ -178,7 +182,7 @@ by Larremore, et al. 2021 for [known](https://github.com/LarremoreLab/covid_sero
 
 --
 
-- And also for [unknown](https://github.com/LarremoreLab/bayesian-joint-prev-se-sp/blob/master/singleSERO_uncertainTEST.R) 
+- And a second one did the same with other __bayesian approach__ developed by Larremore et al. 2020 for [unknown](https://github.com/LarremoreLab/bayesian-joint-prev-se-sp/blob/master/singleSERO_uncertainTEST.R) 
 test performance.
 
 --
@@ -210,9 +214,9 @@ test performance.
 ## # A tibble: 3 x 5
 ##   skim_variable numeric.p05 numeric.mean numeric.p50 numeric.p95
 ##   &lt;chr&gt;               &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
-## 1 r                0.000588      0.00979     0.00721      0.0277
-## 2 se               0.881         0.899       0.900        0.917 
-## 3 sp               0.771         0.786       0.786        0.801
+## 1 r                0.000674       0.0100     0.00757      0.0274
+## 2 se               0.881          0.899      0.900        0.917 
+## 3 sp               0.771          0.786      0.786        0.801
 ```
 
 &lt;img src="serosurvey-user21_files/figure-html/unnamed-chunk-13-1.png" title="Three ggplot facet panels with the same vertical y-axis of density. Histogram and density plots of the Posterior Distribution of the (i) r: Prevalence accounting for misclassification from a diagnostic test with unknown performance; (ii) se: Sensitivity; (iii) sp: Specificity." alt="Three ggplot facet panels with the same vertical y-axis of density. Histogram and density plots of the Posterior Distribution of the (i) r: Prevalence accounting for misclassification from a diagnostic test with unknown performance; (ii) se: Sensitivity; (iii) sp: Specificity."  /&gt;
@@ -389,29 +393,7 @@ toc()
 ```
 
 
-&lt;!-- --- --&gt;
 
-&lt;!-- # Results --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- - For the __survey__ side, we provide functions to calculate single prevalences and generate __tidy outputs__ for a hierarchical bayesian approach that incorporates the __unknown__ test performance --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- - For the __serology__ side, we gather functions of methods available in GitHub repos to solve the inherited misclassification in population-based serological surveys. --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- - We created a __workflow__ that simulates the usage of an __imperfect test__ to measure an outcome within a __multi-stage sampling__ survey design and incorporate the test uncertainty into the sampling design uncertainty. --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- - The `serosurvey` R package was used in the analysis code of the Lima seroprevalence study.  --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- [1] Reyes-Vega, Mary F., et al. "SARS-CoV-2 prevalence associated to low socioeconomic status and overcrowding in an LMIC megacity: A population-based seroepidemiological survey in Lima, Peru." _EClinicalMedicine_ 34 (2021): 100801. https://doi.org/10.1016/j.eclinm.2021.100801 --&gt;
 
 ---
 
@@ -433,46 +415,6 @@ toc()
 
 - Specially in our capacity to __generate comparable results__ from studies with similar epidemiological designs and statistical analysis plans.
 
---
-
-- The `serosurvey` R package was used in the analysis code of the Lima seroprevalence study. 
-
---
-
-[1] Reyes-Vega, Mary F., et al. "SARS-CoV-2 prevalence associated to low socioeconomic status and overcrowding in an LMIC megacity: A population-based seroepidemiological survey in Lima, Peru." _EClinicalMedicine_ 34 (2021): 100801. https://doi.org/10.1016/j.eclinm.2021.100801
-
-&lt;!-- --- --&gt;
-
-&lt;!-- # Next steps --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- - Adjust to the __rOpenSci__ packaging guidelines --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- - Submit package to __CRAN__ --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- - Integrate it to the R Epidemic Consortium __RECON__ --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- - Welcome new functions and workflows to the package via __GitHub__! --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- .footnote[ --&gt;
-&lt;!-- [1] https://devguide.ropensci.org/building.html --&gt;
-
-&lt;!-- [2] https://www.repidemicsconsortium.org/resources/guidelines/ --&gt;
-
-&lt;!-- [3] https://twitter.com/avallecam/status/1312670190694535169 --&gt;
-&lt;!-- ] --&gt;
-
-
-
 ---
 
 class: center, middle
@@ -485,8 +427,7 @@ class: center, middle
 
 class: chapter-slide
 
-# References
-
+# Extra slides
 
 ---
 
@@ -520,6 +461,63 @@ class: chapter-slide
 [8] Larremore, DB, et al. 2021. “Estimating SARS-CoV-2 Seroprevalence and Epidemiological Parameters with Uncertainty from Serological Surveys.” _eLife_, March. https://doi.org/10.7554/eLife.64206.
 
 [9] Larremore, DB., et al. 2020. “Jointly Modeling Prevalence, Sensitivity and Specificity for Optimal Sample Allocation.” _bioRxiv_, May. https://doi.org/10.1101/2020.05.23.112649.
+
+
+---
+
+# Key Results
+
+--
+
+- For the __survey__ side, we provide functions to calculate single prevalences and generate __tidy outputs__ for a hierarchical bayesian approach that incorporates the __unknown__ test performance
+
+--
+
+- For the __serology__ side, we gather functions of methods available in GitHub repos to solve the inherited misclassification in population-based serological surveys.
+
+--
+
+- We created a __workflow__ that simulates the usage of an __imperfect test__ to measure an outcome within a __multi-stage sampling__ survey design and incorporate the test uncertainty into the sampling design uncertainty.
+
+--
+
+- The `serosurvey` R package was used in the analysis code of the Lima seroprevalence study. 
+
+--
+
+[10] Reyes-Vega, Mary F., et al. "SARS-CoV-2 prevalence associated to low socioeconomic status and overcrowding in an LMIC megacity: A population-based seroepidemiological survey in Lima, Peru." _EClinicalMedicine_ 34 (2021): 100801. https://doi.org/10.1016/j.eclinm.2021.100801
+
+
+
+---
+
+# Next steps
+
+--
+
+- Adjust to the __rOpenSci__ packaging guidelines
+
+--
+
+- Submit package to __CRAN__
+
+--
+
+- Integrate it to the R Epidemic Consortium __RECON__
+
+--
+
+- Welcome new functions and workflows to the package via __GitHub__!
+
+--
+
+.footnote[
+[1] https://devguide.ropensci.org/building.html
+
+[2] https://www.repidemicsconsortium.org/resources/guidelines/
+
+[3] https://twitter.com/avallecam/status/1312670190694535169
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
