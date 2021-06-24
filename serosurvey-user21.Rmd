@@ -199,8 +199,8 @@ example("serosvy_proportion")
 --
 
 - We gather __one frequentist approach__ (Rogan and Gladen, 1978), 
-available in different Github repos (Azman et al. 2020; Takahashi et al. 2020).
-Check the [Reference tab](https://avallecam.github.io/serosurvey/reference/index.html).
+available in Github repos (Azman et al. 2020; Takahashi et al. 2020).
+Check [here](https://avallecam.github.io/serosurvey/reference/index.html).
 
 --
 
@@ -222,7 +222,7 @@ in [Article tab](https://avallecam.github.io/serosurvey/articles/howto-reprex.ht
 
 [2] Larremore, DB, et al. 2021. “Estimating SARS-CoV-2 Seroprevalence and Epidemiological Parameters with Uncertainty from Serological Surveys.” _eLife_, March. https://doi.org/10.7554/eLife.64206.
 
-[3] Larremore, DB., et al. 2020. “Jointly Modeling Prevalence, Sensitivity and Specificity for Optimal Sample Allocation.” _bioRxiv_, May. [10.1101/2020.05.23.112649](https://doi.org/10.1101/2020.05.23.112649).
+[3] Larremore, DB., et al. 2020. “Jointly Modeling Prevalence, Sensitivity and Specificity for Optimal Sample Allocation.” _bioRxiv_, May. https://doi.org/10.1101/2020.05.23.112649.
 
 ]
 
