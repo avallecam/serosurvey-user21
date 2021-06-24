@@ -54,11 +54,11 @@ pre {
 --
 
 .footnote[
-[1] Takahashi, S., et al. (2020). Are SARS-CoV-2 seroprevalence estimates biased?. _The Journal of Infectious Diseases_. https://doi.org/10.1093/infdis/jiaa523
+[1] Takahashi, S., et al. 2020. Are SARS-CoV-2 seroprevalence estimates biased?. _The Journal of Infectious Diseases_. https://doi.org/10.1093/infdis/jiaa523
 
-[2] Flor, Matthias, et al. 2020. “Comparison of Bayesian and Frequentist Methods for Prevalence Estimation Under Misclassification.” BMC Public Health 20 (1). https://doi.org/10.1186/s12889-020-09177-4.
+[2] Flor, M., et al. 2020. “Comparison of Bayesian and Frequentist Methods for Prevalence Estimation Under Misclassification.” BMC Public Health 20 (1). https://doi.org/10.1186/s12889-020-09177-4.
 
-[3] Kritsotakis, Evangelos I. 2020. “On the Importance of Population-Based Serological Surveys of SARS-CoV-2 Without Overlooking Their Inherent Uncertainties.” _Public Health in Practice_ 1 (November): 100013. https://doi.org/10.1016/j.puhip.2020.100013.
+[3] Kritsotakis, EI., 2020. “On the Importance of Population-Based Serological Surveys of SARS-CoV-2 Without Overlooking Their Inherent Uncertainties.” _Public Health in Practice_ 1 (November): 100013. https://doi.org/10.1016/j.puhip.2020.100013.
 ]
 
 ---
@@ -530,19 +530,19 @@ outcome_01_adj <- out  %>% #<<
 
 --
 
-- Adjust to the RopenSci packaging guidelines
+- Adjust to the __rOpenSci__ packaging guidelines
 
 --
 
-- Submit package to CRAN
+- Submit package to __CRAN__
 
 --
 
-- Integrate it to the R Epidemic Consortium (RECON)
+- Integrate it to the R Epidemic Consortium __RECON__
 
 --
 
-- Welcome new functions and workflows to the package!
+- Welcome new functions and workflows to the package via __GitHub__!
 
 --
 
