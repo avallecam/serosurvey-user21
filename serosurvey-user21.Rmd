@@ -1,8 +1,8 @@
 ---
 title: "serosurvey: Serological Surveys and Prevalence Estimation Under Misclassification"
 # subtitle: "⚔<br/>with xaringan"
-author: "Andree Valle-Campos (@avallecam) | CDC Perú"
-# institute: "Centro Nacional de Epidemiología, CDC Perú"
+author: "Andree Valle-Campos (@avallecam)"
+institute: "Centro Nacional de Epidemiología, CDC Perú"
 # date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
