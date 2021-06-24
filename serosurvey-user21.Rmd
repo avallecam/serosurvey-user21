@@ -181,7 +181,7 @@ From a [`srvyr`](http://gdfe.co/srvyr/) [`survey`](https://r-survey.r-forge.r-pr
 --
 
 ```{r}
-serosvy_proportion(design = design,
+serosvy_proportion(design = design, #<<
                    denominator = covariate_01,
                    numerator = outcome_one)
 ```
@@ -205,7 +205,7 @@ Check the [Reference tab](https://avallecam.github.io/serosurvey/reference/index
 --
 
 - We provide __tidy outputs for bayesian approaches__ developed 
-in Larremore, et al. for [known](https://github.com/LarremoreLab/covid_serological_sampling/blob/master/codebase/seroprevalence.R) and [unknown](https://github.com/LarremoreLab/bayesian-joint-prev-se-sp/blob/master/singleSERO_uncertainTEST.R) 
+by Larremore, et al. for [known](https://github.com/LarremoreLab/covid_serological_sampling/blob/master/codebase/seroprevalence.R) and [unknown](https://github.com/LarremoreLab/bayesian-joint-prev-se-sp/blob/master/singleSERO_uncertainTEST.R) 
 test performance.
 
 --
@@ -233,7 +233,7 @@ in [Article tab](https://avallecam.github.io/serosurvey/articles/howto-reprex.ht
 --
 
 ```{r,eval=FALSE}
-serosvy_known_sample_posterior(
+serosvy_known_sample_posterior( #<<
   #in population
   positive_number_test = 321,
   total_number_test = 321+1234,
@@ -242,7 +242,7 @@ serosvy_known_sample_posterior(
   specificity = 0.975)
 ```
 
-```{r,echo=FALSE}
+```{r,echo=FALSE,fig.alt="One ggplot panel with density as vertical y-axis. Histogram and density plot of the Posterior Distribution of the Prevalence accounting for misclassification from a diagnostic test with known performance. Additionally, it includes vertical lines at the mean, 5% and 95% percentiles."}
 tidy_result <- serosvy_known_sample_posterior(
   #in population
   positive_number_test = 321,
@@ -302,7 +302,7 @@ certainty.
 ```
 
 ```{r,eval=FALSE}
-serosvy_unknown_sample_posterior_ii(
+serosvy_unknown_sample_posterior_ii( #<<
   #in population
   positive_number_test = 321,
   total_number_test = 321+1234,
@@ -313,7 +313,7 @@ serosvy_unknown_sample_posterior_ii(
   false_negative = 74)
 ```
 
-```{r,echo=FALSE}
+```{r,echo=FALSE,fig.alt="Three ggplot facet panels with the same vertical y-axis of density. Histogram and density plots of the Posterior Distribution of the (i) r: Prevalence accounting for misclassification from a diagnostic test with unknown performance; (ii) se: Sensitivity; (iii) sp: Specificity."}
 result_unk <- serosvy_unknown_sample_posterior_ii(
   #in population
   positive_number_test = 321,
@@ -365,22 +365,22 @@ we provide a workflow to __estimate multiple prevalences__:
 --
 
 ```{r}
-# set 01 of denominator-numerator #<<
-expand_grid( 
+# set 01 of denominator-numerator
+expand_grid( #<<
   design=list(design),
   denominator=c("covariate_01","covariate_02"), # covariates
   numerator=c("outcome_one","outcome_two") # outcomes
   ) %>% 
-  # set 02 of denominator-numerator (e.g. within main outcome) #<<
-  union_all(
+  # set 02 of denominator-numerator (e.g. within main outcome)
+  union_all( #<<
     expand_grid(
       design=list(design),
       denominator=c("outcome_one","outcome_two"), # outcomes
       numerator=c("covariate_02") # covariates
     )) %>%
-  # create symbols (to be read as arguments) #<<
+  # create symbols (to be read as arguments) 
   mutate(
-    denominator=map(denominator,dplyr::sym),
+    denominator=map(denominator,dplyr::sym), #<<
     numerator=map(numerator,dplyr::sym)
   ) %>%
   # estimate prevalence
