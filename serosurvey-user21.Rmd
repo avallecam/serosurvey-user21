@@ -1,5 +1,5 @@
 ---
-title: "serosurvey: Serological Surveys and Prevalence Estimation Under Misclassification"
+title: "serosurvey:<br/>Serological Surveys and<br/>Prevalence Estimation<br/>Under Misclassification"
 # subtitle: "⚔<br/>with xaringan"
 author: "Andree Valle-Campos (@avallecam)"
 institute: "Centro Nacional de Epidemiología, CDC Perú"
